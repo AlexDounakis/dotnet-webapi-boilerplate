@@ -16,3 +16,39 @@ public class FormConfig : IEntityTypeConfiguration<Form>
             .IsMultiTenant();
     }
 }
+
+public class InfoConfig : IEntityTypeConfiguration<Info>
+{
+    public void Configure(EntityTypeBuilder<Info> builder)
+    {
+        builder.ToTable("Info", SchemaNames.Survey);
+            //.IsMultiTenant();
+    }
+}
+
+public class ItemConfig : IEntityTypeConfiguration<Item>
+{
+    public void Configure(EntityTypeBuilder<Item> builder)
+    {
+        builder.ToTable("Items", SchemaNames.Survey);
+            //.IsMultiTenant();
+    }
+}
+
+public class SettingsConfig : IEntityTypeConfiguration<Settings>
+{
+    public void Configure(EntityTypeBuilder<Settings> builder)
+    {
+        builder.ToTable("Settings", SchemaNames.Survey);
+            //.IsMultiTenant();
+    }
+}
+
+public class QuizSettingsConfig : IEntityTypeConfiguration<QuizSettings>
+{
+    public void Configure(EntityTypeBuilder<QuizSettings> builder)
+    {
+        builder.ToTable("QuizSettings", SchemaNames.Survey);
+            //.IsMultiTenant();
+    }
+}
